@@ -27,8 +27,7 @@ public class MyStack {
 		if(top == null) {
 			throw new NoElementFoundException();
 		}else {
-			Node temp = top;
-			int data = temp.getData();
+			int data = top.getData();
 			top = top.getNext();
 			return data;
 		}

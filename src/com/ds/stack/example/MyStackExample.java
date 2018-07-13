@@ -21,8 +21,8 @@ public class MyStackExample {
 			System.out.println("pop : "+stack.pop());
 			System.out.println("pop : "+stack.pop());
 			System.out.println("pop : "+stack.pop());
-			System.out.println("pop : "+stack.pop());
-			System.out.println("pop : "+stack.pop());
+			//System.out.println("pop : "+stack.pop());
+			//System.out.println("pop : "+stack.pop());
 		} catch (NoElementFoundException e) {
 			e.printStackTrace();
 		}
