@@ -9,7 +9,6 @@ Given a list of numbers and a number k, return whether any two numbers from the 
 
 For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
-
 Solution : Complexity nLog(n)
 
  */
@@ -38,8 +37,9 @@ public class Problem1 {
 	
 	
 	public boolean process(int[] arr,int k) {
+		//O(nlog(n))
 		//sort
-		Arrays.sort(arr);
+		Arrays.sort(arr); //nlog(n)
 		if(arr[0] + arr[arr.length -1] == k)
 			return true;
 		
@@ -48,6 +48,7 @@ public class Problem1 {
 		
 		int maxIndex = binarySearch(arr, 0, arr.length -1, k);
 		int i = 0;
+		//n
 		while(i != maxIndex) {
 			if(arr[i] + arr[maxIndex] == k)
 				return true;
@@ -57,6 +58,10 @@ public class Problem1 {
 				i++;
 			}
 		}
+		
+		
+		//nlog(n) + n ~= nlog(n)
+		
 		return false;
 	}
 	
